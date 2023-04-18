@@ -9,7 +9,7 @@ def register(request):
             new_user = user_form.save(commit=False) #해당 form 모델의 인스턴스를 얻어옴
             new_user.set_password(user_form.cleaned_data['password']) #password할당
             new_user.save()
-        return render(request, 'registration/register_done.html', {'new_user':new_user})
+            return render(request, 'registration/register_Done.html', {'new_user':new_user})
     else:#회원가입 내용을 입력하는 상황
         user_form = RegisterForm()
 
